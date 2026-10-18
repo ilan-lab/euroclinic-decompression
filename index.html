@@ -75,6 +75,14 @@ header.top img{height:50px;width:auto}
 .fact p{margin:0;color:var(--muted);font-size:.98rem}
 
 /* who */
+.video-block{margin-top:36px;text-align:center}
+.video-block h3{font-size:1.3rem;color:var(--blue-d);margin-bottom:14px}
+.vid{display:block;width:100%;max-width:360px;aspect-ratio:9/16;margin:0 auto;border-radius:var(--radius);background:#000;box-shadow:0 8px 24px rgba(20,61,120,.15);object-fit:cover}
+.testimonials{background:var(--bg)}
+.t-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,360px));gap:24px;justify-content:center;margin-top:24px}
+.t-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:12px;text-align:center}
+.t-card .vid{box-shadow:none}
+.t-name{font-weight:800;color:var(--blue-d);margin-top:10px;font-size:1.1rem}
 .who{background:var(--bg)}
 .cards{display:grid;gap:14px;grid-template-columns:1fr;margin:24px 0}
 .card{background:#fff;border-radius:var(--radius);padding:22px;border-top:4px solid var(--teal);box-shadow:0 6px 20px -12px rgba(27,42,51,.25)}
@@ -269,6 +277,29 @@ body{padding-bottom:76px}
       <li><h3>מפגשי טיפול</h3><p>כ-20–30 דקות בכל מפגש, בשכיבה נוחה על מיטת הדקומפרסיה הממוחשבת.</p></li>
       <li><h3>מעקב</h3><p>מעקב שוטף אחרי התחושה וההתקדמות, והתאמת התוכנית לפי הצורך.</p></li>
     </ol>
+    <div class="video-block">
+      <h3>איך עובד טיפול דקומפרסיה</h3>
+      <video class="vid" controls playsinline preload="none" poster="videos/decompression_explainer_poster.jpg">
+        <source src="videos/decompression_explainer.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" id="testimonials">
+  <div class="wrap">
+    <span class="eyebrow">עדויות מטופלים</span>
+    <h2>מה המטופלים שלנו אומרים</h2>
+    <div class="t-grid">
+      <figure class="t-card">
+        <video class="vid" controls playsinline preload="none" poster="videos/testimonial_yaniv_poster.jpg">
+          <source src="videos/testimonial_yaniv.mp4" type="video/mp4">
+        </video>
+        <figcaption class="t-name">יניב</figcaption>
+      </figure>
+      <!-- להוספת עדות: העתיקו את ה-figure למעלה ועדכנו וידאו, פוסטר ושם -->
+    </div>
   </div>
 </section>
 
