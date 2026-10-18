@@ -85,6 +85,7 @@ header.top img{height:50px;width:auto}
 .t-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,360px));gap:24px;justify-content:center;margin-top:24px}
 .t-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:12px;text-align:center}
 .t-card .vid{box-shadow:none}
+.dir-card{max-width:360px;margin:0 auto}
 .t-name{font-weight:800;color:var(--blue-d);margin-top:10px;font-size:1.1rem}
 .who{background:var(--bg)}
 .cards{display:grid;gap:14px;grid-template-columns:1fr;margin:24px 0}
@@ -326,6 +327,14 @@ body{padding-bottom:76px}
           <img src="img/branches_map.png" alt="מפת 11 סניפי יורוקליניק: חיפה, קריית מוצקין, משגב, סכנין, ירכא, טבריה, נתניה, טירה, ראשון לציון, רמלה ושגב שלום" width="720" height="1353" loading="lazy">
         </picture>
       </div>
+    </div>
+    <div class="video-block" id="directions">
+      <h3>איך מגיעים אלינו</h3>
+      <figure class="t-card dir-card">
+        <video class="vid" controls playsinline preload="metadata" poster="videos/euro_clinic_directions_poster.jpg" aria-label="סרטון הגעה ליורו קליניק">
+          <source src="videos/euro_clinic_directions.mp4" type="video/mp4">
+        </video>
+      </figure>
     </div>
   </div>
 </section>
