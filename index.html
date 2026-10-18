@@ -418,7 +418,8 @@ body{padding-bottom:76px}
       =====================================================================
       CRM / ActiveCampaign hook:
       Right now this form has NO backend. On submit, JS (see sendLead() below)
-      opens WhatsApp to 972549007723 with the details prefilled.
+      opens WhatsApp to 972549007723 with the details prefilled,
+      and also emails the lead to ilan@i-group.co.il via FormSubmit (EMAIL_ENDPOINT).
       To also save leads to ActiveCampaign / a CRM later:
         1. Create a form in ActiveCampaign (Website > Forms) with fields
            fullname, phone, field[branch], field[pain] and copy its
@@ -521,6 +522,43 @@ body{padding-bottom:76px}
   // CRM / ActiveCampaign: put a form-action or webhook URL here to also store leads.
   // Example: "https://YOURACCOUNT.activehosted.com/proc.php" (+ add AC hidden fields below)
   var CRM_ENDPOINT = "";
+  // Lead email relay (FormSubmit, no backend). Each lead is emailed to Ilan; WhatsApp still opens as before.
+  var EMAIL_ENDPOINT = "https://formsubmit.co/ajax/ilan@i-group.co.il";
+  var EMAIL_SUBJECT = "ליד חדש – דף נחיתה יורוקליניק";
+
+  // Fire-and-forget: never blocks or delays the WhatsApp step (fail-open, ~4s timeout).
+  function sendLeadEmail(data){
+    if (!EMAIL_ENDPOINT) return;
+    var now = new Date(), when;
+    try { when = now.toLocaleString("he-IL", { timeZone: "Asia/Jerusalem" }); } catch(e){ when = now.toString(); }
+    var payload = {
+      "שם מלא": data.fullname,
+      "טלפון": data.phone,
+      "סניף מועדף": data.branch,
+      "סוג הכאב": data.pain,
+      "עמוד": location.href,
+      "זמן שליחה": when + " (" + now.toISOString() + ")",
+      _subject: EMAIL_SUBJECT,
+      _template: "table",
+      _captcha: "false"
+    };
+    try {
+      var ctrl = window.AbortController ? new AbortController() : null;
+      if (ctrl) setTimeout(function(){ ctrl.abort(); }, 4000);
+      fetch(EMAIL_ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "Accept": "application/json" },
+        body: JSON.stringify(payload),
+        signal: ctrl ? ctrl.signal : undefined
+      }).catch(function(){});
+    } catch (err) {
+      try {
+        var fd = new FormData();
+        Object.keys(payload).forEach(function(k){ fd.append(k, payload[k]); });
+        if (navigator.sendBeacon) navigator.sendBeacon(EMAIL_ENDPOINT, fd);
+      } catch (e2) {}
+    }
+  }
 
   function waUrl(msg){ return "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(msg); }
 
@@ -554,6 +592,9 @@ body{padding-bottom:76px}
       try { fetch(CRM_ENDPOINT, { method: "POST", body: fd, mode: "no-cors", keepalive: true }); } catch(err){}
     }
     // -----------------------------------------------------------------------
+
+    // 1) email the lead (async, does not block), 2) open WhatsApp right away, inside the click/submit gesture
+    sendLeadEmail(data);
 
     var msg = DEFAULT_MSG + "\n" +
       "שם: " + data.fullname + "\n" +
