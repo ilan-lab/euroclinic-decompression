@@ -96,6 +96,13 @@ footer a{color:#cfdbe3}
  .hero .txt{margin-top:-150px}
  .final .btns{margin-inline:auto}
 }
+.vids{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}
+.vc{margin:0;background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 8px 24px -16px rgba(11,26,38,.5)}
+.vc video{display:block;width:100%;height:auto;aspect-ratio:9/16;background:#0B1A26;object-fit:cover}
+.vc figcaption{padding:8px 10px 10px;font-size:.85rem;line-height:1.3}.vc figcaption b{display:block}.vc figcaption span{color:var(--mut)}
+.machine .vc{max-width:380px;margin:18px auto 0}
+.revs{background:var(--bg)}
+@media(min-width:760px){.vids{grid-template-columns:repeat(3,1fr)}}
 </style>
 </head>
 <body>
@@ -137,6 +144,12 @@ footer a{color:#cfdbe3}
  <div class="card"><picture><source srcset="img/k2_lying.webp" type="image/webp"><img src="img/k2_lying.jpg" alt="Пациент на аппарате Spine-MT K2 во время декомпрессии" width="1200" height="600" loading="lazy"></picture></div>
 </div></section>
 
+<section class="machine" id="machine"><div class="w">
+ <span class="kick">Видео</span>
+ <h2>Как работает <em>аппарат Spine-MT K2</em></h2>
+ <p>Короткое видео о процедуре декомпрессии — с русскими субтитрами.</p>
+ <figure class="vc"><video controls playsinline webkit-playsinline preload="none" data-poster="videos/explainer_ru_poster.jpg" width="720" height="1280" aria-label="Как проходит декомпрессия на Spine-MT K2"><source src="videos/explainer_ru.mp4" type="video/mp4"><track kind="subtitles" srclang="ru" label="Русский" src="videos/explainer.ru.vtt"></video><figcaption><b>Как проходит декомпрессия на Spine-MT K2</b><span>Видео EURO CLINIC · русские субтитры</span></figcaption></figure>
+</div></section>
 <section class="who" id="who"><div class="w">
  <span class="kick">Кому может подойти</span>
  <h2>Если боль в спине <em>не отпускает</em></h2>
@@ -149,6 +162,23 @@ footer a{color:#cfdbe3}
  <p class="note">Подходит ли вам декомпрессия, решается только на консультации, после просмотра ваших снимков. Не заменяет консультацию врача.</p>
 </div></section>
 
+<section class="revs" id="reviews"><div class="w">
+ <span class="kick">Отзывы пациентов</span>
+ <h2>Отзывы <em>пациентов</em></h2>
+ <p>Настоящие видео пациентов на иврите — с русскими субтитрами. Нажмите, чтобы смотреть прямо здесь.</p>
+ <div class="vids">
+<figure class="vc"><video controls playsinline webkit-playsinline preload="none" data-poster="videos/new_3_ru_poster.jpg" width="720" height="1280" aria-label="«После первой процедуры — огромная разница»"><source src="videos/new_3_ru.mp4" type="video/mp4"><track kind="subtitles" srclang="ru" label="Русский" src="videos/new_3.ru.vtt"></video><figcaption><b>«После первой процедуры — огромная разница»</b><span>Пациент EURO CLINIC</span></figcaption></figure>
+<figure class="vc"><video controls playsinline webkit-playsinline preload="none" data-poster="videos/yaniv_ru_poster.jpg" width="720" height="1280" aria-label="Янив"><source src="videos/yaniv_ru.mp4" type="video/mp4"><track kind="subtitles" srclang="ru" label="Русский" src="videos/yaniv.ru.vtt"></video><figcaption><b>Янив</b><span>Грыжа диска</span></figcaption></figure>
+<figure class="vc"><video controls playsinline webkit-playsinline preload="none" data-poster="videos/new_2_ru_poster.jpg" width="720" height="1280" aria-label="Нили"><source src="videos/new_2_ru.mp4" type="video/mp4"><track kind="subtitles" srclang="ru" label="Русский" src="videos/new_2.ru.vtt"></video><figcaption><b>Нили</b><span>Боль в пояснице с отдачей в ногу</span></figcaption></figure>
+<figure class="vc"><video controls playsinline webkit-playsinline preload="none" data-poster="videos/alon_ru_poster.jpg" width="720" height="1280" aria-label="Алон"><source src="videos/alon_ru.mp4" type="video/mp4"><track kind="subtitles" srclang="ru" label="Русский" src="videos/alon.ru.vtt"></video><figcaption><b>Алон</b><span>«Терпение того стоит»</span></figcaption></figure>
+<figure class="vc"><video controls playsinline webkit-playsinline preload="none" data-poster="videos/eliezer_ru_poster.jpg" width="720" height="1280" aria-label="Элиэзер"><source src="videos/eliezer_ru.mp4" type="video/mp4"><track kind="subtitles" srclang="ru" label="Русский" src="videos/eliezer.ru.vtt"></video><figcaption><b>Элиэзер</b><span>Грыжа и протрузия дисков</span></figcaption></figure>
+<figure class="vc"><video controls playsinline webkit-playsinline preload="none" data-poster="videos/busdriver_ru_poster.jpg" width="720" height="1280" aria-label="Водитель автобуса"><source src="videos/busdriver_ru.mp4" type="video/mp4"><track kind="subtitles" srclang="ru" label="Русский" src="videos/busdriver.ru.vtt"></video><figcaption><b>Водитель автобуса</b><span>После шести процедур</span></figcaption></figure>
+<figure class="vc"><video controls playsinline webkit-playsinline preload="none" data-poster="videos/car6_ru_poster.jpg" width="720" height="1280" aria-label="Он же — сразу после 6‑й процедуры"><source src="videos/car6_ru.mp4" type="video/mp4"><track kind="subtitles" srclang="ru" label="Русский" src="videos/car6.ru.vtt"></video><figcaption><b>Он же — сразу после 6‑й процедуры</b><span>Видео из машины</span></figcaption></figure>
+<figure class="vc"><video controls playsinline webkit-playsinline preload="none" data-poster="videos/patient_f_ru_poster.jpg" width="720" height="1280" aria-label="Хана"><source src="videos/patient_f_ru.mp4" type="video/mp4"><track kind="subtitles" srclang="ru" label="Русский" src="videos/patient_f.ru.vtt"></video><figcaption><b>Хана</b><span>Пациентка рассказывает</span></figcaption></figure>
+<figure class="vc"><video controls playsinline webkit-playsinline preload="none" data-poster="videos/patients_ru_poster.jpg" width="720" height="1280" aria-label="Пациенты рассказывают"><source src="videos/patients_ru.mp4" type="video/mp4"><track kind="subtitles" srclang="ru" label="Русский" src="videos/patients.ru.vtt"></video><figcaption><b>Пациенты рассказывают</b><span>Несколько пациентов во время курса</span></figcaption></figure>
+ </div>
+ <p class="note">Личный опыт пациентов. Результаты у каждого индивидуальны. Не заменяет консультацию врача.</p>
+</div></section>
 <section class="irina" id="irina"><div class="w grid2">
  <div>
   <div class="av" aria-hidden="true">И</div>
@@ -205,5 +235,10 @@ footer a{color:#cfdbe3}
  <a class="btn b-wa" data-cta="wa_sticky" href="https://wa.me/972507199045?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%98%D1%80%D0%B8%D0%BD%D0%B0!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D0%B1%D0%B5%D1%81%D0%BF%D0%BB%D0%B0%D1%82%D0%BD%D1%83%D1%8E%20%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%86%D0%B8%D1%8E%20%D0%BF%D0%BE%20%D0%B4%D0%B5%D0%BA%D0%BE%D0%BC%D0%BF%D1%80%D0%B5%D1%81%D1%81%D0%B8%D0%B8%20%D0%BF%D0%BE%D0%B7%D0%B2%D0%BE%D0%BD%D0%BE%D1%87%D0%BD%D0%B8%D0%BA%D0%B0." target="_blank" rel="noopener">WhatsApp</a>
  <a class="btn b-call" data-cta="call_sticky" href="tel:+972507199045">Позвонить</a>
 </nav>
+<script>
+(function(){var vs=[].slice.call(document.querySelectorAll('video[data-poster]'));function load(v){if(!v.poster)v.poster=v.getAttribute('data-poster')}
+if('IntersectionObserver'in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){load(e.target);io.unobserve(e.target)}})},{rootMargin:'400px'});vs.forEach(function(v){io.observe(v)})}else vs.forEach(load);
+vs.forEach(function(v){v.addEventListener('play',function(){load(v);vs.forEach(function(o){if(o!==v&&!o.paused)o.pause()})})})})();
+</script>
 </body>
 </html>
