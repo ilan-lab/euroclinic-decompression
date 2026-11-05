@@ -9,6 +9,7 @@
 <link rel="canonical" href="https://back.euroclinic.co.il/ru/">
 <link rel="alternate" hreflang="ru" href="https://back.euroclinic.co.il/ru/">
 <link rel="alternate" hreflang="he" href="https://back.euroclinic.co.il/">
+<link rel="alternate" hreflang="x-default" href="https://back.euroclinic.co.il/">
 <meta name="theme-color" content="#0B1A26">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="EURO CLINIC">
@@ -103,6 +104,26 @@ footer a{color:#cfdbe3}
 .machine .vc{max-width:380px;margin:18px auto 0}
 .revs{background:var(--bg)}
 @media(min-width:760px){.vids{grid-template-columns:repeat(3,1fr)}}
+
+/* comprehensive directions — mobile first */
+.loc .dir-actions{display:grid;gap:12px;margin:20px 0}
+.loc .dir-action{display:flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:12px 18px;border-radius:999px;background:var(--bg);border:1.5px solid #e4e9ee;color:var(--n);font-weight:800;text-decoration:none}
+.loc .dir-action:focus-visible{outline:3px solid var(--od);outline-offset:2px}
+.loc .dir-info-grid{display:grid;gap:16px;margin:22px 0}
+.loc .dir-info{background:var(--bg);border-radius:var(--r);padding:20px}
+.loc .dir-info h3{margin-bottom:8px}
+.loc .dir-info p:last-child{margin-bottom:0}
+.loc .dir-highlight{background:#FFF3E8;border-radius:12px;padding:12px 14px;margin-top:12px}
+.loc .bus-lines{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:14px 0}
+.loc .bus-lines li{background:#FFF3E8;border:1px solid #f3d6be;border-radius:999px;padding:5px 13px;font-weight:800;color:var(--n)}
+.loc .dir-note{font-size:.9rem;color:var(--mut);margin-top:14px}
+.loc .dir-video{max-width:360px;margin:24px auto 0}
+.loc .dir-video video{object-fit:contain}
+.loc .dir-video figcaption{padding:10px 12px;font-size:.9rem;color:var(--mut)}
+.loc .dir-bottom{display:grid;gap:20px;align-items:center;margin-top:24px}
+.loc .qr-card{max-width:300px;margin:0 auto;text-align:center}
+.loc .qr-card img{width:160px;height:160px;margin:0 auto}
+@media(min-width:760px){.loc .dir-actions{grid-template-columns:repeat(3,1fr)}.loc .dir-info-grid{grid-template-columns:1fr 1fr}.loc .dir-bottom{grid-template-columns:360px 1fr}}
 </style>
 </head>
 <body>
@@ -207,13 +228,42 @@ footer a{color:#cfdbe3}
 </div></section>
 
 <section class="loc" id="loc"><div class="w">
- <span class="kick">Где мы находимся</span>
- <h2>Лечение спины <em>рядом с домом</em></h2>
- <a class="map" href="https://www.google.com/maps/search/?api=1&query=%D7%9E%D7%90%D7%99%D7%A8+%D7%90%D7%A8%D7%99%D7%90%D7%9C+6+%D7%A0%D7%AA%D7%A0%D7%99%D7%94" target="_blank" rel="noopener">
-  <span class="pin"><svg width="28" height="28" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg></span>
-  <span>EURO CLINIC<br>ул. Меир Ариэль 6, Нетания<br><small lang="he" dir="rtl">מאיר אריאל 6, נתניה</small><br><span style="color:var(--od)">Открыть на карте →</span></span>
- </a>
- <p style="margin-top:12px"><a href="https://waze.com/ul?q=%D7%9E%D7%90%D7%99%D7%A8%20%D7%90%D7%A8%D7%99%D7%90%D7%9C%206%20%D7%A0%D7%AA%D7%A0%D7%99%D7%94&navigate=yes" target="_blank" rel="noopener">Проложить маршрут в Waze</a></p>
+ <span class="kick">Как добраться</span>
+ <h2>Как добраться до клиники <em>в Нетании</em></h2>
+ <p>EURO CLINIC находится по адресу: <strong>ул. Меир Ариэль 6, Нетания</strong> <span lang="he" dir="rtl">(מאיר אריאל 6, נתניה)</span>. Вход в клинику — на <strong>этаже E</strong>, в холле у входа в здание.</p>
+ <div class="dir-actions" aria-label="Навигация и маршрут">
+  <a class="dir-action" href="https://www.google.com/maps/search/?api=1&query=%D7%9E%D7%90%D7%99%D7%A8%20%D7%90%D7%A8%D7%99%D7%90%D7%9C%206%20%D7%A0%D7%AA%D7%A0%D7%99%D7%94" target="_blank" rel="noopener noreferrer">Открыть Google Maps</a>
+  <a class="dir-action" href="https://waze.com/ul?q=%D7%9E%D7%90%D7%99%D7%A8%20%D7%90%D7%A8%D7%99%D7%90%D7%9C%206%20%D7%A0%D7%AA%D7%A0%D7%99%D7%94&navigate=yes" target="_blank" rel="noopener noreferrer">Маршрут в Waze</a>
+  <a class="dir-action" href="https://moovitapp.com/index/he/%D7%AA%D7%97%D7%91%D7%95%D7%A8%D7%94_%D7%A6%D7%99%D7%91%D7%95%D7%A8%D7%99%D7%AA-%D7%9E%D7%90%D7%99%D7%A8_%D7%90%D7%A8%D7%99%D7%90%D7%9C-Israel-site_21913170-1" target="_blank" rel="noopener noreferrer">Маршрут в Moovit</a>
+ </div>
+ <div class="dir-info-grid">
+  <article class="dir-info">
+   <h3>Парковка и вход</h3>
+   <p>Подземная парковка под зданием — <strong>этаж −3</strong>.</p>
+   <p class="dir-highlight">После парковки обратитесь на стойку регистратуры, чтобы получить <strong>возврат стоимости парковки</strong>.</p>
+   <p>Клиника находится на <strong>этаже E</strong>, в холле у входа в здание.</p>
+  </article>
+  <article class="dir-info">
+   <h3>Общественный транспорт</h3>
+   <p>Рядом со зданием проходят автобусные маршруты:</p>
+   <ul class="bus-lines" aria-label="Номера автобусов"><li>63</li><li>98</li><li>138</li><li>148</li><li>606</li><li>608</li></ul>
+   <p><strong>Остановка:</strong> «Парк таасиот Меир Ариэль», Нетания <span lang="he" dir="rtl">(פארק תעשיות מאיר אריאל, נתניה)</span>.</p>
+  </article>
+ </div>
+ <p>Записаться или уточнить, как добраться: <a href="tel:+972507199045">050-719-9045</a> · <a href="https://wa.me/972507199045" target="_blank" rel="noopener noreferrer">WhatsApp</a>. Общий телефон клиники: <a href="tel:+972549007723">054-900-7723</a>.</p>
+ <p class="dir-note">В источнике не указаны маршрут поезда, часы работы и условия доступности. Пожалуйста, уточните эти детали перед визитом.</p>
+ <div class="dir-bottom">
+  <figure class="vc dir-video">
+   <video controls playsinline webkit-playsinline preload="none" data-poster="../videos/euro_clinic_directions_poster.jpg" width="720" height="1280" aria-label="Видео с инструкцией на иврите: как добраться до EURO CLINIC в Нетании">
+    <source src="../videos/euro_clinic_directions.mp4" type="video/mp4">
+   </video>
+   <figcaption><b>Видео: как добраться до клиники и парковки</b><span>Видеоинструкция на иврите</span></figcaption>
+  </figure>
+  <figure class="vc qr-card">
+   <img src="../img/directions-qr.png" width="180" height="180" loading="lazy" alt="QR-код для навигации в Google Maps к клинике по адресу Меир Ариэль 6, Нетания">
+   <figcaption>Отсканируйте код, чтобы открыть маршрут в Google Maps.</figcaption>
+  </figure>
+ </div>
 </div></section>
 
 <section class="final"><div class="w">

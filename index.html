@@ -5,11 +5,29 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>טיפול דקומפרסיה לגב | יורוקליניק – Euro Clinic</title>
 <meta name="description" content="טיפול דקומפרסיה ממוחשבת לעמוד השדרה ביורוקליניק – לסובלים מכאבי גב, פריצת דיסק וסיאטיקה. 11 סניפים ברחבי הארץ. קביעת תור בוואטסאפ.">
+<meta name="robots" content="index,follow">
 <meta name="theme-color" content="#E8661A">
+<link rel="canonical" href="https://back.euroclinic.co.il/">
+<link rel="alternate" hreflang="he" href="https://back.euroclinic.co.il/">
+<link rel="alternate" hreflang="ru" href="https://back.euroclinic.co.il/ru/">
+<link rel="alternate" hreflang="x-default" href="https://back.euroclinic.co.il/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Euro Clinic – יורוקליניק">
 <meta property="og:title" content="טיפול דקומפרסיה לגב | יורוקליניק">
 <meta property="og:description" content="טיפול ממוחשב ועדין לעמוד השדרה, ללא ניתוח. 11 סניפים ברחבי הארץ.">
-<meta property="og:image" content="img/spinemt_k2.jpg">
+<meta property="og:url" content="https://back.euroclinic.co.il/">
+<meta property="og:image" content="https://back.euroclinic.co.il/og/og-he.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="טיפול דקומפרסיה בעמוד השדרה ביורוקליניק">
 <meta property="og:locale" content="he_IL">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="טיפול דקומפרסיה לגב | יורוקליניק">
+<meta name="twitter:description" content="טיפול ממוחשב ועדין לעמוד השדרה, ללא ניתוח. 11 סניפים ברחבי הארץ.">
+<meta name="twitter:image" content="https://back.euroclinic.co.il/og/og-he.jpg">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"MedicalClinic","name":"Euro Clinic – יורוקליניק","url":"https://back.euroclinic.co.il/","image":"https://back.euroclinic.co.il/og/og-he.jpg","telephone":"+972549007723","address":{"@type":"PostalAddress","streetAddress":"מאיר אריאל 6","addressLocality":"נתניה","addressCountry":"IL"},"availableLanguage":["he","ru"],"medicalSpecialty":"Physiotherapy"}
+</script>
 <link rel="icon" href="img/euroclinic_logo_orange.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -190,6 +208,30 @@ body{padding-bottom:76px}
   .br-grid{grid-template-columns:1fr 420px;gap:48px}
   .map{margin:0}
 }
+
+/* comprehensive directions — mobile first */
+.directions-wrap{max-width:960px;margin:28px auto 0;text-align:start}
+.directions-wrap h2{margin-bottom:10px}
+.directions-wrap .lead{margin-bottom:24px}
+.dir-info-grid{display:grid;gap:16px;margin:22px 0}
+.dir-info{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:20px}
+.dir-info h3{margin-bottom:8px;color:var(--blue-d)}
+.dir-info p:last-child{margin-bottom:0}
+.dir-highlight{background:var(--teal-l);border-radius:12px;padding:12px 14px;margin-top:12px}
+.bus-lines{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:14px 0}
+.bus-lines li{background:var(--teal-l);border:1px solid var(--line);border-radius:999px;padding:5px 13px;font-weight:700;color:var(--blue-d)}
+.dir-actions{display:grid;gap:12px;margin:20px 0}
+.dir-action{display:flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:12px 18px;border-radius:999px;background:var(--teal-l);border:1.5px solid var(--line);font-weight:700;text-decoration:none;color:var(--blue-d)}
+.dir-action:focus-visible{outline:3px solid #7A3414;outline-offset:2px}
+.dir-note{font-size:.95rem;color:var(--muted);margin-top:14px}
+.directions-wrap .dir-card{margin:24px auto 0}
+.directions-wrap figcaption{color:var(--muted);margin-top:10px;font-size:.95rem}
+.directions-wrap .vid{object-fit:contain}
+.directions-wrap .dir-bottom{display:grid;gap:20px;align-items:center;margin-top:24px}
+.directions-wrap .qr-card{margin:0;text-align:center}
+.directions-wrap .qr-card img{width:160px;height:160px;margin:0 auto}
+@media(min-width:720px){.dir-info-grid{grid-template-columns:1fr 1fr}.dir-actions{grid-template-columns:repeat(3,1fr)}.directions-wrap .dir-bottom{grid-template-columns:360px 1fr}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 @media (max-width:380px){.top-call .txt{display:none}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 </style>
@@ -397,13 +439,42 @@ body{padding-bottom:76px}
         </picture>
       </div>
     </div>
-    <div class="video-block" id="directions">
-      <h3>איך מגיעים אלינו</h3>
-      <figure class="t-card dir-card">
-        <video class="vid" controls playsinline preload="metadata" poster="videos/euro_clinic_directions_poster.jpg" aria-label="סרטון הגעה ליורו קליניק">
-          <source src="videos/euro_clinic_directions.mp4" type="video/mp4">
-        </video>
-      </figure>
+    <div class="directions-wrap" id="directions">
+      <h2>איך מגיעים לסניף נתניה</h2>
+      <p class="lead">כל הפרטים לביקור ביורוקליניק: הכתובת היא <strong>מאיר אריאל 6, נתניה</strong>. הקליניקה נמצאת ב<strong>קומה E</strong>, ברחבת הכניסה לבניין.</p>
+      <div class="dir-actions" aria-label="ניווט ותכנון מסלול">
+        <a class="dir-action" href="https://www.google.com/maps/search/?api=1&query=%D7%9E%D7%90%D7%99%D7%A8%20%D7%90%D7%A8%D7%99%D7%90%D7%9C%206%20%D7%A0%D7%AA%D7%A0%D7%99%D7%94" target="_blank" rel="noopener noreferrer">פתיחה ב-Google Maps</a>
+        <a class="dir-action" href="https://waze.com/ul?q=%D7%9E%D7%90%D7%99%D7%A8%20%D7%90%D7%A8%D7%99%D7%90%D7%9C%206%20%D7%A0%D7%AA%D7%A0%D7%99%D7%94&navigate=yes" target="_blank" rel="noopener noreferrer">ניווט ב-Waze</a>
+        <a class="dir-action" href="https://moovitapp.com/index/he/%D7%AA%D7%97%D7%91%D7%95%D7%A8%D7%94_%D7%A6%D7%99%D7%91%D7%95%D7%A8%D7%99%D7%AA-%D7%9E%D7%90%D7%99%D7%A8_%D7%90%D7%A8%D7%99%D7%90%D7%9C-Israel-site_21913170-1" target="_blank" rel="noopener noreferrer">תכנון מסלול ב-Moovit</a>
+      </div>
+      <div class="dir-info-grid">
+        <article class="dir-info">
+          <h3>חניה וכניסה לבניין</h3>
+          <p>חניון מתחת לבניין — <strong>קומה מינוס 3</strong>.</p>
+          <p class="dir-highlight">לאחר החניה יש לפנות לקבלה לקבלת <strong>החזר על תשלום החניה</strong>.</p>
+          <p>מהחניון או מהכניסה יש להגיע ל<strong>קומה E</strong>, ברחבת הכניסה לבניין.</p>
+        </article>
+        <article class="dir-info">
+          <h3>תחבורה ציבורית</h3>
+          <p>קווי האוטובוס העוברים ליד הבניין:</p>
+          <ul class="bus-lines" aria-label="קווי אוטובוס"><li>63</li><li>98</li><li>138</li><li>148</li><li>606</li><li>608</li></ul>
+          <p><strong>תחנה:</strong> פארק תעשיות מאיר אריאל, נתניה.</p>
+        </article>
+      </div>
+      <p>לתיאום תור או לעזרה בהגעה: <a href="tel:+972549007723">054-900-7723</a> · <a href="https://wa.me/972549007723" target="_blank" rel="noopener noreferrer">WhatsApp</a>.</p>
+      <p class="dir-note">במקור ההוראות לא צוינו רכבת, שעות פעילות או הנגשה; לפרטים נוספים ניתן ליצור קשר לפני ההגעה.</p>
+      <div class="dir-bottom">
+        <figure class="t-card dir-card">
+          <video class="vid" controls playsinline preload="none" poster="videos/euro_clinic_directions_poster.jpg" aria-label="סרטון הדרכה: הגעה ליורוקליניק בסניף נתניה">
+            <source src="videos/euro_clinic_directions.mp4" type="video/mp4">
+          </video>
+          <figcaption>סרטון הדרכה: הדרך לקליניקה ולחניון.</figcaption>
+        </figure>
+        <figure class="t-card qr-card">
+          <img src="img/directions-qr.png" width="180" height="180" loading="lazy" alt="קוד QR לניווט ב-Google Maps למאיר אריאל 6 בנתניה">
+          <figcaption>סורקים את הקוד לניווט ישיר ב-Google Maps.</figcaption>
+        </figure>
+      </div>
     </div>
   </div>
 </section>
